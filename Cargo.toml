@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "shelby",
+    "shelby_cli",
+]
