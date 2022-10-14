@@ -1,3 +1,6 @@
+fn delta3() {}
+
+
 #[cfg(test)]
 mod tests {
     #[test]
