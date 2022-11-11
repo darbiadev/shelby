@@ -1,4 +1,5 @@
-var N = null;var sourcesIndex = {};
-sourcesIndex["shelby"] = {"name":"","files":["lib.rs"]};
-sourcesIndex["shelby_cli"] = {"name":"","files":["main.rs"]};
+var sourcesIndex = JSON.parse('{\
+"shelby":["",[],["lib.rs"]],\
+"shelby_cli":["",[],["main.rs"]]\
+}');
 createSourceSidebar();
