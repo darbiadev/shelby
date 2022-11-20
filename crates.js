@@ -1,1 +1,1 @@
-window.ALL_CRATES = ["shelby","shelby_cli"];
+window.ALL_CRATES = ["shelby"];
