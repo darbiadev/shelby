@@ -45,7 +45,7 @@
             config: Config { quiet },
         }
     }
-    <span class="kw">pub fn </span>parse&lt;<span class="lifetime">&#39;a</span>&gt;(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span><span class="self">self</span>, data: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>str) -&gt; <span class="kw-2">&amp;</span>str {
+    <span class="kw">pub fn </span>parse(<span class="kw-2">&amp;</span><span class="self">self</span>, data: String) -&gt; String {
         <span class="kw">if </span>!<span class="self">self</span>.config.quiet {
             <span class="macro">println!</span>(<span class="string">&quot;{data:#?}&quot;</span>);
         }
@@ -60,7 +60,7 @@
     <span class="attribute">#[test]
     </span><span class="kw">fn </span>it_works() {
         <span class="kw">let </span>client = Shelby::new(<span class="bool-val">false</span>);
-        <span class="kw">let </span>result = client.parse(<span class="string">&quot;test&quot;</span>);
+        <span class="kw">let </span>result = client.parse(String::from(<span class="string">&quot;test&quot;</span>));
         <span class="macro">assert_eq!</span>(result, <span class="string">&quot;test&quot;</span>);
     }
 }
