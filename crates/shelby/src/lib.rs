@@ -12,7 +12,7 @@ impl Shelby {
             config: Config { quiet },
         }
     }
-    pub fn parse<'a>(&'a self, data: &'a str) -> &str {
+    pub fn parse(&self, data: String) -> String {
         if !self.config.quiet {
             println!("{data:#?}");
         }
@@ -27,7 +27,7 @@ mod tests {
     #[test]
     fn it_works() {
         let client = Shelby::new(false);
-        let result = client.parse("test");
+        let result = client.parse(String::from("test"));
         assert_eq!(result, "test");
     }
 }
