@@ -1,4 +1,6 @@
-use clap::{command, value_parser, Arg, ArgAction, ArgMatches, Command};
+use std::error::Error;
+
+use clap::{Arg, ArgAction, ArgMatches, command, Command, value_parser};
 use clap_complete::{generate, Generator, Shell};
 
 pub(crate) struct Context {
@@ -74,9 +76,24 @@ pub(crate) async fn process_matches(
             let mut cmd = build_cli();
             print_completions(*generator, &mut cmd);
         }
-    } else if let Some(_matches) = matches.subcommand_matches("process") {
-        println!("IT WORKS!")
+    } else if let Some(matches) = matches.subcommand_matches("process") {
+        if let Some(input_file) = matches.get_one::<String>("input-file") {
+            read_csv(input_file).unwrap()
+        }
     }
+}
+
+
+fn read_csv(input_file: &str) -> Result<(), Box<dyn Error>> {
+    // Build the CSV reader and iterate over each record.
+    let mut rdr = csv::Reader::from_path(input_file)?;
+    for result in rdr.records() {
+        // The iterator yields Result<StringRecord, Error>, so we check the
+        // error here.
+        let record = result?;
+        println!("{:?}", record);
+    }
+    Ok(())
 }
 
 #[test]
