@@ -1,6 +1,6 @@
 var searchIndex = JSON.parse('{\
-"shelby":{"doc":"","t":[],"n":[],"q":[],"d":[],"i":[],"f":[],"p":[]},\
-"shelby_cli":{"doc":"","t":[5],"n":["main"],"q":["shelby_cli"],"d":[""],"i":[0],"f":[[[]]],"p":[]}\
+"shelby":{"doc":"","t":[3,11,11,11,11,11,11,11,11,11],"n":["Shelby","borrow","borrow_mut","from","into","new","parse","try_from","try_into","type_id"],"q":["shelby","","","","","","","","",""],"d":["","","","Returns the argument unchanged.","Calls <code>U::from(self)</code>.","","","","",""],"i":[0,2,2,2,2,2,2,2,2,2],"f":[0,[[]],[[]],[[]],[[]],[1,2],[[2,3],3],[[],4],[[],4],[[],5]],"p":[[15,"bool"],[3,"Shelby"],[15,"str"],[4,"Result"],[3,"TypeId"]]},\
+"shelby_cli":{"doc":"Shelby","t":[0,5,3,12,11,11,5,11,11,11,5,5,5,11,11,11],"n":["cli","main","Context","_quiet","borrow","borrow_mut","build_cli","from","into","new","print_completions","process_matches","read_csv","try_from","try_into","type_id"],"q":["shelby_cli","","shelby_cli::cli","","","","","","","","","","","","",""],"d":["","","","","","","","Returns the argument unchanged.","Calls <code>U::from(self)</code>.","","","","","","",""],"i":[0,0,0,3,3,3,0,3,3,3,0,0,0,3,3,3],"f":[0,[[]],0,0,[[]],[[]],[[],1],[[]],[[]],[2,3],[[4,1]],[[3,5,6]],[7,[[10,[[9,[8]]]]]],[[],10],[[],10],[[],11]],"p":[[3,"Command"],[15,"bool"],[3,"Context"],[8,"Generator"],[3,"Figment"],[3,"ArgMatches"],[15,"str"],[8,"Error"],[3,"Box"],[4,"Result"],[3,"TypeId"]]}\
 }');
 if (typeof window !== 'undefined' && window.initSearch) {window.initSearch(searchIndex)};
 if (typeof exports !== 'undefined') {exports.searchIndex = searchIndex};
