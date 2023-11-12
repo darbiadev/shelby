@@ -7,11 +7,13 @@ pub(crate) struct Config {
 }
 
 impl Shelby {
+    #[must_use]
     pub fn new(quiet: bool) -> Shelby {
         Shelby {
             config: Config { quiet },
         }
     }
+    #[must_use]
     pub fn parse(&self, data: String) -> String {
         if !self.config.quiet {
             println!("{data:#?}");
